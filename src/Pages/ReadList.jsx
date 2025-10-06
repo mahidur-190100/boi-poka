@@ -48,8 +48,8 @@ const ReadList = () => {
 
   return (
     <div>
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn m-1">
+      <div className="dropdown ">
+        <div tabIndex={0} role="button" className="btn m-1 ">
           Sort by : {sort?sort:""}
         </div>
         <ul
@@ -68,15 +68,19 @@ const ReadList = () => {
 
         <TabPanel>
           <h2>Book I read {readList.length}</h2>
-          {readList.map((b) => (
+          <div className="grid grid-col-span-1s-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> 
+            {readList.map((b) => (
             <SingleBook key={b.bookId} book={b} />
           ))}
+          </div>
         </TabPanel>
         <TabPanel>
           <h2>My wish List {wishList.length}</h2>
-          {wishList.map((b) => (
+          <div className="grid grid-col-span-1s-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {wishList.map((b) => (
             <SingleBook key={b.bookId} book={b} />
           ))}
+          </div>
         </TabPanel>
       </Tabs>
     </div>

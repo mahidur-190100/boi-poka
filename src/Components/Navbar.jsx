@@ -5,18 +5,18 @@ const Navbar = () => {
   const links = (
     <>
       <Link to="/">
-        <li className="m-2">Home</li>
+        <li className="m-2 font-bold rounded-full border-2 border-transparent hover:border-green-500 hover:text-green-500 transition-all duration-300 py-2 px-4">Home</li>
       </Link>
       <Link to="/About">
-        <li className="m-2">about</li>
+        <li className="m-2 font-bold rounded-full border-2 border-transparent hover:border-green-500 hover:text-green-500 transition-all duration-300 py-2 px-4">About</li>
       </Link>
       <Link to="ReadList">
-        <li className="m-2">ReadList</li>
+        <li className="m-2 font-bold rounded-full border-2 border-transparent hover:border-green-500 hover:text-green-500 transition-all duration-300 py-2 px-4">ReadList</li>
       </Link>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,13 +43,14 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Boi POka</a>
+        <a className="btn btn-ghost text-xl">Boi Poka</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-3 rounded-3xl">
+        <a className="btn bg-green-600 text-white ">Sign In</a>
+        <a className="btn bg-blue-300 text-white">Sign Up</a>
       </div>
     </div>
   );
